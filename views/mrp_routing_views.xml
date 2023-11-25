@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <data>
+
+
+
+        <record id="mrp_routing_workcenter_tree_view_inherited" model="ir.ui.view">
+            <field name="name">mrp.routing.workcenter.tree.view.inherited</field>
+            <field name="model">mrp.routing.workcenter</field>
+            <field name="inherit_id" ref="mrp.mrp_routing_workcenter_tree_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='bom_product_template_attribute_value_ids']" position="after">
+                    <field name="blocked_by_operation_ids" widget="many2many_tags" options="{'no_create_edit': True}" optional="hide" groups="mrp_workorder_dependency.group_mrp_workorder_dependencies"
+                    attrs="{'column_invisible': [('parent.allow_operation_dependencies', '=', False)]}"/>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="mrp_routing_workcenter_form_view_inherited" model="ir.ui.view">
+            <field name="name">mrp.routing.workcenter.form.view.inherited</field>
+            <field name="model">mrp.routing.workcenter</field>
+            <field name="inherit_id" ref="mrp.mrp_routing_workcenter_form_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='bom_product_template_attribute_value_ids']" position="after">
+                    <field name="allow_operation_dependencies" invisible="1"/>
+                    <field name="blocked_by_operation_ids"
+                           widget="many2many_tags"
+                           context="{'default_bom_id':bom_id}" options="{'no_create_edit': True}" attrs="{'invisible': [('allow_operation_dependencies', '=', False)]}"/>
+                </xpath>
+            </field>
+        </record>
+
+
+
+
+    </data>
+</odoo>

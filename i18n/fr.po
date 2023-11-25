@@ -1,0 +1,117 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* mrp_workorder_dependency
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 15.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-11-25 15:43+0000\n"
+"PO-Revision-Date: 2023-11-25 15:43+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: mrp_workorder_dependency
+#: model:ir.model,name:mrp_workorder_dependency.model_mrp_bom
+msgid "Bill of Material"
+msgstr "Nomenclature"
+
+#. module: mrp_workorder_dependency
+#: model:ir.model.fields,field_description:mrp_workorder_dependency.field_mrp_routing_workcenter__blocked_by_operation_ids
+msgid "Blocked By"
+msgstr "Bloqué par"
+
+#. module: mrp_workorder_dependency
+#: model:ir.model,name:mrp_workorder_dependency.model_res_config_settings
+msgid "Config Settings"
+msgstr "Paramètres de config"
+
+#. module: mrp_workorder_dependency
+#: model:ir.model.fields,help:mrp_workorder_dependency.field_mrp_bom__allow_operation_dependencies
+#: model:ir.model.fields,help:mrp_workorder_dependency.field_mrp_routing_workcenter__allow_operation_dependencies
+msgid ""
+"Create operation level dependencies that will influence both planning and "
+"the status of work orders upon MO confirmation. If this feature is ticked, "
+"and nothing is specified, Odoo will assume that no dependency block the starting of operations"
+msgstr ""
+"Créez des dépendances au niveau de l'opération qui influenceront le planning"
+" et le statut des ordres de travail lors de la confirmation de l'OF. Si "
+"cette fonctionnalité est activée et si rien n'est précisé, Odoo supposera "
+"qu'aucune dépendance ne bloque le démarrage des opérations."
+
+#. module: mrp_workorder_dependency
+#: model:ir.model.fields,field_description:mrp_workorder_dependency.field_mrp_workorder_pending_confirmation__create_uid
+msgid "Created by"
+msgstr "Créé par"
+
+#. module: mrp_workorder_dependency
+#: model:ir.model.fields,field_description:mrp_workorder_dependency.field_mrp_workorder_pending_confirmation__create_date
+msgid "Created on"
+msgstr "Créé le"
+
+#. module: mrp_workorder_dependency
+#: model:ir.model.fields,field_description:mrp_workorder_dependency.field_mrp_workorder_pending_confirmation__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: mrp_workorder_dependency
+#: model:ir.model.fields,field_description:mrp_workorder_dependency.field_mrp_workorder_pending_confirmation__id
+msgid "ID"
+msgstr "ID"
+
+#. module: mrp_workorder_dependency
+#: model:ir.model.fields,field_description:mrp_workorder_dependency.field_mrp_workorder_pending_confirmation____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: mrp_workorder_dependency
+#: model:ir.model.fields,field_description:mrp_workorder_dependency.field_mrp_workorder_pending_confirmation__write_uid
+msgid "Last Updated by"
+msgstr "Dernière mise à jour par"
+
+#. module: mrp_workorder_dependency
+#: model:ir.model.fields,field_description:mrp_workorder_dependency.field_mrp_workorder_pending_confirmation__write_date
+msgid "Last Updated on"
+msgstr "Dernière mise à jour le"
+
+#. module: mrp_workorder_dependency
+#: model:ir.model.fields,field_description:mrp_workorder_dependency.field_mrp_bom__allow_operation_dependencies
+#: model:ir.model.fields,field_description:mrp_workorder_dependency.field_mrp_routing_workcenter__allow_operation_dependencies
+msgid "Operation Dependencies"
+msgstr "Dépendances d'opération"
+
+#. module: mrp_workorder_dependency
+#: model:ir.model.fields,help:mrp_workorder_dependency.field_mrp_routing_workcenter__blocked_by_operation_ids
+msgid "Operations that need to be completed before this operation can start."
+msgstr ""
+"Opérations qui doivent être terminées avant que cette opération puisse "
+"commencer."
+
+
+#. module: mrp_workorder_dependency
+#: model_terms:ir.ui.view,arch_db:mrp_workorder_dependency.res_config_settings_view_form_inherit
+msgid ""
+"Set the order that work orders should be processed in according to precedent orders. Activate the feature "
+"within each BoM's Miscellaneous tab"
+msgstr ""
+"Définissez l'ordre dans lequel les ordres de travail doivent être traités suivant le démarrage de l'ordre de travail précédent. "
+"Activer la fonctionnalité dans l'onglet Divers de chaque nomenclature."
+
+#. module: mrp_workorder_dependency
+#: model:res.groups,name:mrp_workorder_dependency.group_mrp_workorder_dependencies
+msgid "Use Operation Dependencies"
+msgstr "Utiliser les dépendances d'opération"
+
+#. module: mrp_workorder_dependency
+#: model:ir.model,name:mrp_workorder_dependency.model_mrp_workorder
+msgid "Work Order"
+msgstr "Ordre de travail"
+
+#. module: mrp_workorder_dependency
+#: model:ir.model.fields,field_description:mrp_workorder_dependency.field_res_config_settings__group_mrp_workorder_dependencies
+msgid "Work Order Dependencies"
+msgstr "Dépendances des ordres de travail"
