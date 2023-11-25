@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 15.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-11-25 15:43+0000\n"
-"PO-Revision-Date: 2023-11-25 15:43+0000\n"
+"POT-Creation-Date: 2023-11-25 20:45+0000\n"
+"PO-Revision-Date: 2023-11-25 20:45+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -26,6 +26,13 @@ msgid "Blocked By"
 msgstr "Bloqué par"
 
 #. module: mrp_workorder_dependency
+#: code:addons/mrp_workorder_dependency/models/mrp_workorder.py:0
+#, python-format
+msgid ""
+"The work order depends on one or more work orders that have not yet started"
+msgstr "L'ordre de travail dépend de un ou plusieurs ordres de travail qui n'ont pas encore démarré"
+
+#. module: mrp_workorder_dependency
 #: model:ir.model,name:mrp_workorder_dependency.model_res_config_settings
 msgid "Config Settings"
 msgstr "Paramètres de config"
@@ -36,12 +43,13 @@ msgstr "Paramètres de config"
 msgid ""
 "Create operation level dependencies that will influence both planning and "
 "the status of work orders upon MO confirmation. If this feature is ticked, "
-"and nothing is specified, Odoo will assume that no dependency block the starting of operations"
+"and nothing is specified, Odoo will assume that all operations can be "
+"started simultaneously."
 msgstr ""
 "Créez des dépendances au niveau de l'opération qui influenceront le planning"
 " et le statut des ordres de travail lors de la confirmation de l'OF. Si "
 "cette fonctionnalité est activée et si rien n'est précisé, Odoo supposera "
-"qu'aucune dépendance ne bloque le démarrage des opérations."
+"que toutes les opérations peuvent être démarrées simultanément."
 
 #. module: mrp_workorder_dependency
 #: model:ir.model.fields,field_description:mrp_workorder_dependency.field_mrp_workorder_pending_confirmation__create_uid
@@ -61,7 +69,7 @@ msgstr ""
 #. module: mrp_workorder_dependency
 #: model:ir.model.fields,field_description:mrp_workorder_dependency.field_mrp_workorder_pending_confirmation__id
 msgid "ID"
-msgstr "ID"
+msgstr ""
 
 #. module: mrp_workorder_dependency
 #: model:ir.model.fields,field_description:mrp_workorder_dependency.field_mrp_workorder_pending_confirmation____last_update
@@ -91,20 +99,40 @@ msgstr ""
 "Opérations qui doivent être terminées avant que cette opération puisse "
 "commencer."
 
+#. module: mrp_workorder_dependency
+#: model:ir.model,name:mrp_workorder_dependency.model_mrp_workorder_pending_confirmation
+msgid "Pending confirmation"
+msgstr "Confirmation de mise en attente"
+
+#. module: mrp_workorder_dependency
+#: model:ir.model.fields,field_description:mrp_workorder_dependency.field_mrp_workorder_pending_confirmation__pending_date
+msgid "Pending date"
+msgstr "Date de mise en attente"
+
+#. module: mrp_workorder_dependency
+#: model:ir.model.fields,field_description:mrp_workorder_dependency.field_mrp_workorder_pending_confirmation__pending_motif_id
+msgid "Pending motif"
+msgstr "Motif de mise en attente"
 
 #. module: mrp_workorder_dependency
 #: model_terms:ir.ui.view,arch_db:mrp_workorder_dependency.res_config_settings_view_form_inherit
 msgid ""
-"Set the order that work orders should be processed in according to precedent orders. Activate the feature "
-"within each BoM's Miscellaneous tab"
+"Set the order that work orders should be processed in according to precedent"
+" orders. Activate the feature within each BoM's Miscellaneous tab"
 msgstr ""
-"Définissez l'ordre dans lequel les ordres de travail doivent être traités suivant le démarrage de l'ordre de travail précédent. "
-"Activer la fonctionnalité dans l'onglet Divers de chaque nomenclature."
+"Définissez l'ordre dans lequel les ordres de travail doivent être traités "
+"suivant le démarrage de l'ordre de travail précédent. Activer la "
+"fonctionnalité dans l'onglet Divers de chaque nomenclature."
 
 #. module: mrp_workorder_dependency
 #: model:res.groups,name:mrp_workorder_dependency.group_mrp_workorder_dependencies
 msgid "Use Operation Dependencies"
 msgstr "Utiliser les dépendances d'opération"
+
+#. module: mrp_workorder_dependency
+#: model:ir.model,name:mrp_workorder_dependency.model_mrp_routing_workcenter
+msgid "Work Center Usage"
+msgstr "Utilisation du poste de charge"
 
 #. module: mrp_workorder_dependency
 #: model:ir.model,name:mrp_workorder_dependency.model_mrp_workorder
